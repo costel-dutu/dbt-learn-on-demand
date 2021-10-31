@@ -13,3 +13,4 @@ with orders as (
 )
 
 select * from orders
+{{ limit_data_on_dev('order_date', 1000) }}
