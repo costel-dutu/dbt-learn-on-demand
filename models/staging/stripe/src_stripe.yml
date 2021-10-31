@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: DBT_CDUTU
+    description: A clone of a Posgres application database.
+    database: DBT_SANDBOX
+    tables:
+      - name: src_payments
+        description: Raw payments data.
+        columns:
+          - name: id
+            description: Primary key for payments.
+            tests: 
+              - unique
+              - not_null
+  
